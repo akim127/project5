@@ -39,18 +39,41 @@ public class MorseCodeTree {
 
 	}
 	
+	public void addNode(String code, String letter) {
+		
+	}
+	
+	/*
+	 * builds full morse code tree
+	 */
 	public void buildTree() {
 		
 	}
 	
+	/*
+	 * gets letter from code
+	 */
+	public String fetchLetter(TreeNode<String> root, String code) {
+		return null;
+	}
+	
+	/*
+	 * returns list of inorder traversal
+	 */
 	public ArrayList<String> toArrayList() {
 		return null;
 	}
 	
+	/*
+	 * returns string of inorder traversal
+	 */
 	public String printTree() {
 		return null;
 	}
 	
+	/*
+	 * adds tree contents to list (inorder)
+	 */
 	public void traverseInOrder(TreeNode<String> root, ArrayList<String> list) {
 		
 	}
