@@ -7,24 +7,32 @@
  */
 
 public class TreeNode <T> {
+	private T data;
+	private TreeNode<T> left;
+	private TreeNode<T> right;
+	
 	/*
 	 * creates treeNode using dataNode
 	 */
 	TreeNode(T dataNode) {
-		
+		data = dataNode;
+		left = null;
+		right = null;
 	}
 	
 	/*
 	 * copy constructor
 	 */
 	TreeNode(TreeNode<T> node) {
-		
+		data = node.data;
+		left = node.left;
+		right = node.right;
 	}
 
 	/*
 	 * returns data of TreeNode
 	 */
 	public T getData() {
-		return null;
+		return data;
 	}
 }
