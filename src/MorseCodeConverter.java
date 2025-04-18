@@ -1,3 +1,11 @@
+/*
+ * Name: Alexander Jaemin Kim
+ * Professor Eivazi
+ * CMSC 204-32453
+ * Due Date: 4/22/25
+ * Class: MorseCodeConverter
+ */
+
 import java.io.File;
 import java.io.FileNotFoundException;
 
