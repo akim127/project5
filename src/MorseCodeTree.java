@@ -7,25 +7,27 @@
  */
 
 public class MorseCodeTree {
+	private TreeNode<String> root;
+	
 	/*
 	 * initializes root to null
 	 */
 	public MorseCodeTree() {
-		
+		root = new TreeNode<>(null);
 	}
 	
 	/*
 	 * returns root of MorseCodeTree
 	 */
 	public TreeNode<String> getRoot() {
-		return null;
+		return root;
 	}
 	
 	/*
 	 * sets root of given TreeNode
 	 */
 	public void setRoot(TreeNode<String> newNode) {
-
+		root = newNode;
 	}
 	
 	/*
