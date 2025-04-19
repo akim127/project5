@@ -24,17 +24,21 @@ class TreeNodeTest_STUDENT {
 
     @Test // Test case for TreeNode(T dataNode) constructor
     void testTreeNodePassingData() {
-	fail("Not yet implemented");
+    	TreeNode<String> myNode = new TreeNode<>("z");
+    	assertEquals("z", myNode.getData());
     }
 
     @Test // Test case for TreeNode(TreeNode<T> node) constructor
     void testCopyTreeNode() {
-	fail("Not yet implemented");
+    	TreeNode<String> myNode = new TreeNode<>("z");
+    	TreeNode<String> copy = new TreeNode<>(myNode);
+    	assertEquals("z", copy.getData());
     }
 
     @Test
     void testGetData() {
-	fail("Not yet implemented");
+		TreeNode<String> myNode = new TreeNode<>("z");
+		assertEquals("z", myNode.getData());
     }
 
 }

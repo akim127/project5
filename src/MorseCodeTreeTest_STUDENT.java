@@ -14,12 +14,17 @@ import org.junit.jupiter.api.Test;
 
 class MorseCodeTreeTest_STUDENT {
 
+	private MorseCodeTree myTree;
+	
     @BeforeEach
     void setUp() throws Exception {
+    	myTree = new MorseCodeTree();
+    	myTree.buildTree();
     }
 
     @AfterEach
     void tearDown() throws Exception {
+    	myTree = null;
     }
 
     @Test
