@@ -1,5 +1,5 @@
 /*
- * Name: Alexander Jaemin Kim
+ * Alexander Jaemin Kim
  * Professor Eivazi
  * CMSC 204-32453
  * Due Date: 4/22/25

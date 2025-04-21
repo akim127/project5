@@ -1,5 +1,5 @@
 /*
- * Name: Alexander Jaemin Kim
+ * Alexander Jaemin Kim
  * Professor Eivazi
  * CMSC 204-32453
  * Due Date: 4/22/25
@@ -15,7 +15,7 @@ public class MorseCodeTree {
 	 * initializes root to null
 	 */
 	public MorseCodeTree() {
-		root = new TreeNode<>(null);
+		root = new TreeNode<>("");
 	}
 	
 	/*
@@ -63,6 +63,9 @@ public class MorseCodeTree {
 		}
 	}
 	
+	/*
+	 * for buildTree
+	 */
 	public void addNode(String code, String letter) {
 		addNode(root, code, letter);
 	}
@@ -71,7 +74,39 @@ public class MorseCodeTree {
 	 * builds full morse code tree
 	 */
 	public void buildTree() {
+		//1 blink
+		addNode(".", "e");
+		addNode("-", "t");
 		
+		//2 blinks
+		addNode("..", "i");
+		addNode(".-", "a");
+		addNode("-.", "n");
+		addNode("--", "m");
+		
+		//3 blinks
+		addNode("...", "s");
+		addNode("..-", "u");
+		addNode(".-.", "r");
+		addNode(".--", "w");
+		addNode("-..", "d");
+		addNode("-.-", "k");
+		addNode("--.", "g");
+		addNode("---", "o");
+		
+		//4 blinks
+		addNode("....", "h");
+		addNode("...-", "v");
+		addNode("..-.", "f");
+		addNode(".-..", "l");
+		addNode(".--.", "p");
+		addNode(".---", "j");
+		addNode("-...", "b");
+		addNode("-..-", "x");
+		addNode("-.-.", "c");
+		addNode("-.--", "y");
+		addNode("--..", "z");
+		addNode("--.-", "q");		
 	}
 	
 	/*

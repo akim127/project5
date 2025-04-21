@@ -1,5 +1,5 @@
 /*
- * Name: Alexander Jaemin Kim
+ * Alexander Jaemin Kim
  * Professor Eivazi
  * CMSC 204-32453
  * Due Date: 4/22/25
@@ -29,12 +29,15 @@ class MorseCodeTreeTest_STUDENT {
 
     @Test
     void testGetRoot() {
-	fail("Not yet implemented");
+        TreeNode<String> root = myTree.getRoot();
+        assertEquals("", root.getData());
     }
 
     @Test
     void testSetRoot() {
-	fail("Not yet implemented");
+    	TreeNode<String> newRoot = new TreeNode<>("a");
+    	myTree.setRoot(newRoot);
+    	assertEquals(newRoot, myTree.getRoot());
     }
 
     @Test // Test case for method addNode(TreeNode<String> root, String code, String
