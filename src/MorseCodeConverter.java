@@ -6,6 +6,7 @@
  * Class: MorseCodeConverter
  */
 
+import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
 
@@ -14,6 +15,7 @@ public class MorseCodeConverter {
 	 * converts morse code to eng characters
 	 */
 	public static String convertToEnglish(String code) {
+		MorseCodeTree myTree = new MorseCodeTree();
 		return null;
 	}
 	
@@ -21,6 +23,8 @@ public class MorseCodeConverter {
 	 * converts morse code from file to eng characters
 	 */
 	public static String convertToEnglish(File codeFile) throws FileNotFoundException {
+		Scanner myScanner = new Scanner(codeFile);
+		
 		return null;
 	}
 }

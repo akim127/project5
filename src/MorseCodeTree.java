@@ -36,11 +36,35 @@ public class MorseCodeTree {
 	 * adds letter to tree from morse code
 	 */
 	public void addNode(TreeNode<String> root, String code, String letter) {
-
+		//base
+		if (code.length() == 1) {
+			if (code.equals(".")) {
+				root.left = new TreeNode<>(letter);
+			}
+			else if (code.equals("-")) {
+				root.right = new TreeNode<>(letter);
+			}
+		}
+		
+		//recursive
+		if (code.length() > 1) {
+			if (code.charAt(0) == '.') {
+				if (root.left == null) {
+					root.left = new TreeNode<>(letter);
+				}
+				addNode(root, code.substring(1), letter);
+			}
+			if (code.charAt(0) == '-') {
+				if (root.right == null) {
+					root.right = new TreeNode<>(letter);
+				}
+				addNode(root, code.substring(1), letter);
+			}
+		}
 	}
 	
 	public void addNode(String code, String letter) {
-		
+		addNode(root, code, letter);
 	}
 	
 	/*
@@ -58,6 +82,13 @@ public class MorseCodeTree {
 	}
 	
 	/*
+	 * adds tree contents to list (inorder)
+	 */
+	public void traverseInOrder(TreeNode<String> root, ArrayList<String> list) {
+		
+	}
+	
+	/*
 	 * returns list of inorder traversal
 	 */
 	public ArrayList<String> toArrayList() {
@@ -69,12 +100,5 @@ public class MorseCodeTree {
 	 */
 	public String printTree() {
 		return null;
-	}
-	
-	/*
-	 * adds tree contents to list (inorder)
-	 */
-	public void traverseInOrder(TreeNode<String> root, ArrayList<String> list) {
-		
 	}
 }
