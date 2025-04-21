@@ -48,7 +48,17 @@ class MorseCodeTreeTest_STUDENT {
 
     @Test
     void testBuildTree() {
-	fail("Not yet implemented");
+    	//with 1
+		assertEquals("e", myTree.fetchLetter(myTree.getRoot(), "."));
+		
+		//with 2
+		assertEquals("i", myTree.fetchLetter(myTree.getRoot(), ".."));
+		
+		//with 3
+		assertEquals("r", myTree.fetchLetter(myTree.getRoot(), ".-."));
+
+		//with 4
+		assertEquals("z", myTree.fetchLetter(myTree.getRoot(), "--.."));
     }
 
     @Test

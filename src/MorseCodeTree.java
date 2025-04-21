@@ -52,13 +52,13 @@ public class MorseCodeTree {
 				if (root.left == null) {
 					root.left = new TreeNode<>(letter);
 				}
-				addNode(root, code.substring(1), letter);
+				addNode(root.left, code.substring(1), letter);
 			}
 			if (code.charAt(0) == '-') {
 				if (root.right == null) {
 					root.right = new TreeNode<>(letter);
 				}
-				addNode(root, code.substring(1), letter);
+				addNode(root.right, code.substring(1), letter);
 			}
 		}
 	}
@@ -113,7 +113,18 @@ public class MorseCodeTree {
 	 * gets letter from code
 	 */
 	public String fetchLetter(TreeNode<String> root, String code) {
-		return null;
+		//base
+		if (code.length() == 0) {
+			return root.getData();
+		}
+		
+		//recursive
+		if (code.charAt(0) == '.') {
+			return fetchLetter(root.left, code.substring(1));
+		}
+		else {
+			return fetchLetter(root.right, code.substring(1));
+		}
 	}
 	
 	/*
