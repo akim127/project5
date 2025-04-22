@@ -148,13 +148,26 @@ public class MorseCodeTree {
 	 * returns list of inorder traversal
 	 */
 	public ArrayList<String> toArrayList() {
-		return null;
+		ArrayList<String> myList = new ArrayList<>();
+		
+		traverseInOrder(root, myList);
+		return myList;
 	}
 	
 	/*
 	 * returns string of inorder traversal
 	 */
 	public String printTree() {
-		return null;
+		ArrayList<String> myList = toArrayList();
+		StringBuilder sb = new StringBuilder();
+		
+		for (int i = 0; i < myList.size(); i++) {
+			sb.append(myList.get(i));
+	        if (i < myList.size() - 1) {
+	        	sb.append(" ");
+	        }
+		}
+		
+		return sb.toString();
 	}
 }
