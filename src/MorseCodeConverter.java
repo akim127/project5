@@ -16,7 +16,23 @@ public class MorseCodeConverter {
 	 */
 	public static String convertToEnglish(String code) {
 		MorseCodeTree myTree = new MorseCodeTree();
-		return null;
+		myTree.buildTree();
+		
+		StringBuilder sb = new StringBuilder();
+		String[] words = code.trim().split(" ");
+
+		
+		for (int i = 0; i < words.length; i++) {
+			if (words[i].equals("/")) {
+				sb.append(" ");
+			}
+			else {
+				String letter = myTree.fetchLetter(myTree.getRoot(), words[i]);
+				sb.append(letter);
+			}
+		}
+		
+		return sb.toString().trim();
 	}
 	
 	/*
@@ -24,6 +40,7 @@ public class MorseCodeConverter {
 	 */
 	public static String convertToEnglish(File codeFile) throws FileNotFoundException {
 		Scanner myScanner = new Scanner(codeFile);
+		StringBuilder sb = new StringBuilder();
 		
 		return null;
 	}
