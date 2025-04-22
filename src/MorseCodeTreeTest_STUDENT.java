@@ -8,6 +8,8 @@
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.ArrayList;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -43,7 +45,12 @@ class MorseCodeTreeTest_STUDENT {
     @Test // Test case for method addNode(TreeNode<String> root, String code, String
 	  // letter)
     void testAddNodePassingRoot() {
-	fail("Not yet implemented");
+    	 MorseCodeTree tree = new MorseCodeTree();
+         TreeNode<String> myRoot = new TreeNode<>("");
+         
+         tree.addNode(myRoot, "--.", "g");
+
+         assertEquals("g", myRoot.right.right.left.getData());
     }
 
     @Test
@@ -63,17 +70,32 @@ class MorseCodeTreeTest_STUDENT {
 
     @Test
     void testFetchLetter() {
-	fail("Not yet implemented");
+    	//using 1
+    	assertEquals("e", myTree.fetchLetter(myTree.getRoot(), "."));
+    	
+    	//testing with 2
+        assertEquals("m", myTree.fetchLetter(myTree.getRoot(), "--"));
+
+        //with 3
+        assertEquals("k", myTree.fetchLetter(myTree.getRoot(), "-.-"));
+
+        //with 4
+        assertEquals("z", myTree.fetchLetter(myTree.getRoot(), "--.."));
     }
 
     @Test
     void testToArrayList() {
-	fail("Not yet implemented");
+    	ArrayList<String> myList = myTree.toArrayList();
+        assertTrue(myList.contains("a"));
+        assertTrue(myList.contains("m"));
+        assertTrue(myList.contains("z"));
+        assertEquals(26, myList.size());
     }
 
     @Test
     void testPrintTree() {
-	fail("Not yet implemented");
+        String inorder = "h s v i f u e l r a p w j b d x n c k y t z g q m o";
+        assertEquals(inorder, myTree.printTree());
     }
 
 }
