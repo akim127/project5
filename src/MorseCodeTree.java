@@ -131,7 +131,17 @@ public class MorseCodeTree {
 	 * adds tree contents to list (inorder)
 	 */
 	public void traverseInOrder(TreeNode<String> root, ArrayList<String> list) {
+		if (root.left != null) {
+			traverseInOrder(root.left, list);
+		}
 		
+		if (!root.getData().equals("")) {
+			list.add(root.getData());
+		}
+		
+		if (root.right != null) {
+			traverseInOrder(root.right, list);
+		}
 	}
 	
 	/*
