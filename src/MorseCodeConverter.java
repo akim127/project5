@@ -42,6 +42,15 @@ public class MorseCodeConverter {
 		Scanner myScanner = new Scanner(codeFile);
 		StringBuilder sb = new StringBuilder();
 		
-		return null;
+		while (myScanner.hasNextLine()) {
+			String line = myScanner.nextLine().trim();
+			if (line.length() > 0) {
+				sb.append(line).append(" / ");
+			}
+		}
+		
+		myScanner.close();
+		
+		return convertToEnglish(sb.toString().trim());
 	}
 }

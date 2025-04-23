@@ -6,6 +6,7 @@
  * Class: MorseCodeConverterTest_STUDENT
  */
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 
 import org.junit.jupiter.api.AfterEach;
@@ -24,8 +25,10 @@ class MorseCodeConverterTest_STUDENT {
 
     @Test
     void testConvertToEnglish() {
-	fail("Not yet implemented");
-    }
+    	String converter1 = MorseCodeConverter.convertToEnglish("-- -.-. / -.-. -- ... -.-.");
+    	String converter2 = MorseCodeConverter.convertToEnglish(".... .- ...- . / .- / -. .. -.-. . / -.. .- -.--");
+    	assertEquals("mc cmsc", converter1);
+    	assertEquals("have a nice day", converter2);    }
 
     @Test
     public void testHowDoILoveTheeFile() {
